@@ -1,0 +1,19 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  test:
+    cmds:
+      - go test ./...
+  run-day01:
+    cmds:
+      - go run . trebuchet ./day01/input.txt
+
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
