@@ -17,3 +17,11 @@ func TestProcessFile2(t *testing.T) {
 		t.Fatalf("got %d expected %d", val, expected)
 	}
 }
+
+func TestProcessFile3(t *testing.T) {
+	var expected int64 = 88
+	val := ProcessFile("../day01/test3.txt")
+	if expected != val {
+		t.Fatalf("got %d expected %d", val, expected)
+	}
+}

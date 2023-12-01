@@ -32,7 +32,8 @@ func ProcessFile(file string) int64 {
 			temp += string(r)
 			rv := stringToDigit(temp)
 			if rv > -1 {
-				temp = ""
+				pos := utf8.RuneCountInString(temp)
+				temp = string([]rune(temp)[pos-1:])
 				return rv
 			}
 			return -1
