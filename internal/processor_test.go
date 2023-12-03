@@ -1,18 +1,20 @@
-package internal
+package internal_test
 
-import "testing"
+import (
+	"github.com/cajun-code/advent/internal"
+	"github.com/stretchr/testify/assert"
+	"testing"
+)
 
 func TestProcessFile(t *testing.T) {
 	var expected int64 = 142
-	val := ProcessFile("../day01/test.txt")
-	if expected != val {
-		t.Fatalf("got %d expected %d", val, expected)
-	}
+	val := internal.ProcessFile("../day01/test.txt")
+	assert.Equal(t, expected, val)
 }
 
 func TestProcessFile2(t *testing.T) {
 	var expected int64 = 281
-	val := ProcessFile("../day01/test2.txt")
+	val := internal.ProcessFile("../day01/test2.txt")
 	if expected != val {
 		t.Fatalf("got %d expected %d", val, expected)
 	}
@@ -20,7 +22,7 @@ func TestProcessFile2(t *testing.T) {
 
 func TestProcessFile3(t *testing.T) {
 	var expected int64 = 88
-	val := ProcessFile("../day01/test3.txt")
+	val := internal.ProcessFile("../day01/test3.txt")
 	if expected != val {
 		t.Fatalf("got %d expected %d", val, expected)
 	}

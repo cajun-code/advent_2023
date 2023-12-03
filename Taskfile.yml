@@ -12,6 +12,9 @@ tasks:
   run-day01:
     cmds:
       - go run . trebuchet ./day01/input.txt
+  run-day02:
+    cmds:
+      - go run . cube ./day02/input.txt
 
   default:
     cmds:
